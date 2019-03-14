@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Golden</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="utils.js" defer></script>
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div id="controls">
+			<div class="controls-container">
+				<label for="speed">Speed:</label>
+				<input id="speed" type="range" value="35">
+			</div>
+			<div class="controls-container">
+				<label for="color">Color:</label>
+				<input id="color" type="color" value="#2dffff">
+			</div>
+			<div class="controls-container">
+				<label for="line-thickness">Line thickness:</label>
+				<input id="line-thickness" type="range" value="0">
+			</div>
+			<div class="controls-container">
+				<label for="spiral-thickness">Spiral thickness:</label>
+				<input id="spiral-thickness" type="range" value="40">
+			</div>
+			<div class="controls-container">
+				<label for="show-lines">Show lines:</label>
+				<input id="show-lines" type="checkbox" checked>
+			</div>
+			<div class="controls-container">
+				<label for="show-spiral">Show spiral:</label>
+				<input id="show-spiral" type="checkbox" checked>
+			</div>
+			<div class="controls-container">
+				<label for="counter-clockwise">Draw arcs counter-clockwise:</label>
+				<input id="counter-clockwise" type="checkbox">
+			</div>
+			<div class="controls-container">
+				<label for="clear-canvas">Clear each draw:</label>
+				<input id="clear-canvas" type="checkbox" checked>
+			</div>
+		</div>
+		<canvas id="canvas"></canvas>
+	</body>
+</html>

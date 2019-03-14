@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "SF Mono";
+	font-size: 15px;
+	padding: 1em;
+	max-width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.header__title {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: initial;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}

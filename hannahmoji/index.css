@@ -1,0 +1,71 @@
+:root {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: initial;
+}
+
+#canvas {
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.emoji {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.emoji__image {
+    filter: drop-shadow(0 0 5rem black);
+}
+.emoji__title {
+    font-size: 2em;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+.emoji__description {}
+
+.emoji__title,
+.emoji__description {
+    text-shadow: 0 0 1rem black;
+}
+
+
+.search {
+    margin-top: 4rem;
+    width: 100%;
+}
+.search__input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: initial;
+    border-radius: 1rem;
+    color: inherit;
+    font: inherit;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.search__input::placeholder {
+    color: black;
+}

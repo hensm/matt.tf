@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>New Tab</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Cabin:600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="clock-wrapper">
+            <img id="background" class="center x y hidden">
+            <video id="video-background" class="center x y hidden" autoplay loop></video>
+            <div id="overlay"></div>
+            <div id="subreddit" class="no-select">
+                <span id="subreddit-name"></span>
+                <span id="subreddit-sort"></span>
+                <div id="subreddit-choose" class="hidden">
+                    <div id="subreddit-choose-inner" class="center y">
+                        <div id="subreddit-choose-change">
+                            <div>Change</div>
+                        </div>
+                        <input id="subreddit-choose-name" type="text">
+                        <input id="subreddit-choose-sort" type="text">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="toggle-sound" class="muted hidden"></div>
+            <div id="clock" class="center x y no-select no-click"></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

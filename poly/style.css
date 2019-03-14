@@ -1,0 +1,23 @@
+:root {
+	--border-color: rgba(255, 255, 255, 0.25);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+body {
+
+}
+
+#canvas {
+	position: absolute;
+	pointer-events: none;
+}
