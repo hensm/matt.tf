@@ -1,7 +1,8 @@
 "use strict";
 
 const AVATAR_ID_HANNAH = "191405008_41-s5";
-const AVATAR_ID_ME     = "519634393_3-s5";
+const AVATAR_ID_ME = "191405008_41-s5";
+//const AVATAR_ID_ME     = "519634393_3-s5";
 
 
 // Elements
