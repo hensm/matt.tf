@@ -30,3 +30,23 @@ for (let i = 0; i < mailTextContent.length; i++) {
 		}
 	}, CURSOR_STEP * i);
 }
+
+
+let zoomLevel = 1;
+
+window.addEventListener("wheel", ev => {
+	const change = -(ev.deltaY / 10)
+
+	if ((zoomLevel + change) > 1) {
+		if ((zoomLevel + change) < 3) {
+			zoomLevel += change;
+		} else {
+			zoomLevel = 3;
+		}
+	} else {
+		zoomLevel = 1;
+	}
+
+	document.body.style.transformOrigin = "top left";
+	document.body.style.transform = `scale(${1 * zoomLevel})`;
+});

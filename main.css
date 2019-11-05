@@ -4,29 +4,74 @@
     padding: 0;
 }
 
+:root {
+    --background-color: white;
+    --text-color: black;
+    --overlay1: rgba(0, 0, 0, 0.5);
+    --overlay2: rgba(255, 255, 255, 0.25);
+
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: black;
+        --text-color: white;
+        --overlay1: rgba(255, 255, 255, 0.5);
+        --overlay2: rgba(0, 0, 0, 0.25);
+    }
+}
+
+
 body {
-	font-family: "SF Mono";
-	font-size: 15px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+	font-family: IBMVGA8;
+	font-size: 16px;
+    line-height: 16px;
 	padding: 1em;
 	max-width: 100%;
 }
 
+@keyframes rainbow-animation {
+      0% { background-position: 0% 50%; }
+     50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .header {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 1em;
+    position: relative;
+    user-select: none;
+    width: 27ch;
 }
 
 .header__title {
-    font-size: 1.5em;
+    display: inline;
+    font-size: 1em;
     font-weight: normal;
     margin: initial;
 }
 
+.header:hover {
+    animation: rainbow-animation 5s steps(27) infinite;
+    background-image:
+        linear-gradient(to right
+          , var(--overlay2), var(--overlay2))
+      , linear-gradient(to right
+          , red, orange, yellow, green
+          , blue, indigo, violet, red);
+    background-repeat: repeat;
+    background-size: calc(162ch);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
-    }
+.header:hover .header__title {
+    -webkit-text-fill-color: var(--overlay1);
+}
+
+
+#mail {
+    font: inherit;
 }
