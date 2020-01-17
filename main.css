@@ -7,18 +7,14 @@
 :root {
     --background-color: white;
     --text-color: black;
-    --overlay1: rgba(0, 0, 0, 0.5);
-    --overlay2: rgba(255, 255, 255, 0.25);
 
     overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: black;
+        --background-color: navy;
         --text-color: white;
-        --overlay1: rgba(255, 255, 255, 0.5);
-        --overlay2: rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -30,13 +26,17 @@ body {
 	font-size: 16px;
     line-height: 16px;
 	padding: 1em;
-	max-width: 100%;
+	width: min-content;
 }
 
-@keyframes rainbow-animation {
-      0% { background-position: 0% 50%; }
-     50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes rainbow {
+    0%, 100% { color: red; }
+    14.2857142857% { color: orange; }
+    28.5714285714% { color: yellow; }
+    42.8571428571% { color: green; }
+    57.1428571429% { color: cyan; }
+    71.4285714286% { color: blue; }
+    85.7142857143% { color: violet; }
 }
 
 .header {
@@ -54,21 +54,7 @@ body {
 }
 
 .header:hover {
-    animation: rainbow-animation 5s steps(27) infinite;
-    background-image:
-        linear-gradient(to right
-          , var(--overlay2), var(--overlay2))
-      , linear-gradient(to right
-          , red, orange, yellow, green
-          , blue, indigo, violet, red);
-    background-repeat: repeat;
-    background-size: calc(162ch);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.header:hover .header__title {
-    -webkit-text-fill-color: var(--overlay1);
+    animation: 15s linear infinite forwards rainbow;
 }
 
 
