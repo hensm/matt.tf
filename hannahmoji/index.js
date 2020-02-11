@@ -1,8 +1,10 @@
 "use strict";
 
-const AVATAR_ID_HANNAH = "191405008_41-s5";
-const AVATAR_ID_ME = "191405008_41-s5";
-//const AVATAR_ID_ME     = "519634393_3-s5";
+const AVATAR_ID_HANNAH  = "191405008_41-s5";
+const AVATAR_ID_ME = "519634393_3-s5";
+const AVATAR_ID_BORIS  = "99061890821_3-s5";
+
+const urlParams = new URLSearchParams(window.location.search);
 
 
 // Elements
@@ -107,9 +109,13 @@ async function init (res) {
         }
 
         for (const result of results) {
+            const partnerId = urlParams.get("boris")
+                ? AVATAR_ID_BORIS
+                : AVATAR_ID_ME;
+
             const url = result.src
                     .replace("%s", AVATAR_ID_HANNAH)
-                    .replace("%s", AVATAR_ID_ME);
+                    .replace("%s", partnerId);
 
             const tag = document.createElement("a");
             const img = document.createElement("img");
@@ -118,8 +124,7 @@ async function init (res) {
 
             tag.addEventListener("click", ev => {
                 ev.preventDefault();
-                
-                displayEmoji(result, AVATAR_ID_HANNAH, AVATAR_ID_ME);
+                displayEmoji(result, AVATAR_ID_HANNAH, partnerId);
             });
 
             tag.appendChild(img);
